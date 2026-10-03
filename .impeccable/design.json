@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-03T00:00:00Z",
+  "title": "Design System: SalarySurvival",
+  "extensions": {
+    "colorMeta": {
+      "paper-100": { "role": "neutral", "displayName": "Paper", "canonical": "#f6f2e7", "tonalRamp": ["#22221e", "#4a463c", "#645e50", "#a3987f", "#cbc0a8", "#e2dac7", "#eee8d9", "#fcfaf4"] },
+      "paper-50": { "role": "neutral", "displayName": "Fresh Paper", "canonical": "#fcfaf4", "tonalRamp": ["#22221e", "#4a463c", "#645e50", "#a3987f", "#cbc0a8", "#e2dac7", "#eee8d9", "#fcfaf4"] },
+      "paper-200": { "role": "neutral", "displayName": "Worn Paper", "canonical": "#eee8d9" },
+      "paper-300": { "role": "neutral", "displayName": "Hairline", "canonical": "#e2dac7" },
+      "paper-400": { "role": "neutral", "displayName": "Card Rule", "canonical": "#cbc0a8" },
+      "paper-500": { "role": "neutral", "displayName": "Faded Rule", "canonical": "#a3987f" },
+      "ink-900": { "role": "neutral", "displayName": "Charcoal Ink", "canonical": "#22221e" },
+      "ink-700": { "role": "neutral", "displayName": "Soft Ink", "canonical": "#4a463c" },
+      "ink-600": { "role": "neutral", "displayName": "Pencil", "canonical": "#645e50" },
+      "forest-700": { "role": "primary", "displayName": "Ledger Forest", "canonical": "#1f5137", "tonalRamp": ["#153826", "#1a442e", "#1f5137", "#2a6446", "#9fbca4", "#bcd2bd", "#dce7da", "#edf2eb"] },
+      "forest-900": { "role": "primary", "displayName": "Ledger Cover", "canonical": "#153826", "tonalRamp": ["#153826", "#1a442e", "#1f5137", "#2a6446", "#9fbca4", "#bcd2bd", "#dce7da", "#edf2eb"] },
+      "forest-800": { "role": "primary", "displayName": "Forest Deep", "canonical": "#1a442e" },
+      "forest-600": { "role": "primary", "displayName": "Focus Forest", "canonical": "#2a6446" },
+      "forest-300": { "role": "primary", "displayName": "Pale Forest", "canonical": "#9fbca4" },
+      "forest-200": { "role": "primary", "displayName": "Pale Forest", "canonical": "#bcd2bd" },
+      "forest-100": { "role": "primary", "displayName": "Spent Wash", "canonical": "#dce7da" },
+      "forest-50": { "role": "primary", "displayName": "Pale Forest", "canonical": "#edf2eb" },
+      "rail-muted": { "role": "primary", "displayName": "Rail Muted", "canonical": "#b6ccbb" },
+      "amber-600": { "role": "secondary", "displayName": "Due Amber", "canonical": "#a9741c", "tonalRamp": ["#74490b", "#a9741c", "#ecd29c", "#f5e6c6"] },
+      "amber-800": { "role": "secondary", "displayName": "Due Amber Text", "canonical": "#74490b" },
+      "amber-200": { "role": "secondary", "displayName": "Due Amber Light", "canonical": "#ecd29c" },
+      "amber-100": { "role": "secondary", "displayName": "Due Amber Ground", "canonical": "#f5e6c6" },
+      "red-600": { "role": "tertiary", "displayName": "Shortfall Red", "canonical": "#a33b2d", "tonalRamp": ["#862a1e", "#a33b2d", "#f4dcd5"] },
+      "red-800": { "role": "tertiary", "displayName": "Shortfall Red Text", "canonical": "#862a1e" },
+      "red-100": { "role": "tertiary", "displayName": "Shortfall Red Ground", "canonical": "#f4dcd5" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The daily-allowance sentence only. 2rem phones, 2.75rem from 640px, 3.25rem from 1024px; max 24ch." },
+      "headline": { "displayName": "Headline", "purpose": "Page titles, including the Overview greeting. 1.875rem phones, 2.25rem from 640px." },
+      "title": { "displayName": "Title", "purpose": "Section headings and fieldset legends; 1.25rem in dialog headers." },
+      "figure": { "displayName": "Figure", "purpose": "Summary money amounts; 1.5rem phones, 1.75rem from 640px; always tabular." },
+      "body": { "displayName": "Body", "purpose": "Default text." },
+      "body-sm": { "displayName": "Body Small", "purpose": "Explanatory text in ink-700, held to 60-62ch; table text." },
+      "label": { "displayName": "Label", "purpose": "Names above figures, captions, row metadata, in Pencil. Sentence case." },
+      "stamp": { "displayName": "Stamp", "purpose": "Uppercase status stamps only." }
+    },
+    "shadows": [
+      { "name": "sheet", "value": "0 18px 40px -16px rgb(34 34 30 / 0.28), 0 2px 6px -2px rgb(34 34 30 / 0.12)", "purpose": "Dialogs, bottom sheets and toasts. Never in-flow content." },
+      { "name": "backdrop", "value": "rgb(34 34 30 / 0.38)", "purpose": "Modal dialog backdrop." }
+    ],
+    "motion": [
+      { "name": "control-colour", "value": "120ms ease-out", "purpose": "Background, border and colour changes on buttons and fields. State changes are otherwise instant." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "All transitions and animations collapse under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px", "purpose": "Day grid goes from 8 to 16 columns; figures row from 2 to 4 columns; side padding 16px to 32px." },
+      { "name": "lg", "value": "1024px", "purpose": "Forest rail replaces the header bar and bottom bar; two-column pages; worksheet panels gain a border." }
+    ],
+    "focus": { "value": "outline: 2px solid #2a6446; outline-offset: 2px", "purpose": "Every focusable element; fields use offset 0 and shift their border to forest-600." },
+    "fonts": {
+      "serif": "var(--font-besley), var(--font-anek), Georgia, serif",
+      "sans": "var(--font-anek), Segoe UI, system-ui, sans-serif",
+      "note": "Besley has no ₹ glyph; the serif stack falls back to Anek Latin for the rupee sign. Anek Latin is loaded with the wdth axis."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one main action in a region: Add transaction, Save, Apply.",
+      "html": "<button class=\"ds-btn ds-btn-primary\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Add transaction</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 2.5rem; padding: 0 0.95rem; border-radius: 3px; font-family: var(--font-anek), 'Segoe UI', system-ui, sans-serif; font-weight: 560; font-size: 0.9375rem; line-height: 1; white-space: nowrap; border: 1px solid transparent; cursor: pointer; transition: background-color 120ms ease-out, border-color 120ms ease-out, color 120ms ease-out; } .ds-btn-primary { background: #1f5137; color: #fcfaf4; } .ds-btn-primary:hover { background: #1a442e; } .ds-btn:focus-visible { outline: 2px solid #2a6446; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Alternative actions: Mark paid, Cancel, Start fresh.",
+      "html": "<button class=\"ds-btn-secondary\">Mark paid</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; min-height: 2rem; padding: 0 0.65rem; border-radius: 3px; font-family: var(--font-anek), 'Segoe UI', system-ui, sans-serif; font-weight: 560; font-size: 0.875rem; line-height: 1; background: #fcfaf4; border: 1px solid #cbc0a8; color: #22221e; cursor: pointer; transition: background-color 120ms ease-out; } .ds-btn-secondary:hover { background: #eee8d9; } .ds-btn-secondary:focus-visible { outline: 2px solid #2a6446; outline-offset: 2px; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Amount input with a fixed rupee prefix; all fields share the frame.",
+      "html": "<label class=\"ds-field-wrap\"><span class=\"ds-field-label\">Amount</span><span class=\"ds-field-box\"><span class=\"ds-field-prefix\">₹</span><input class=\"ds-field\" inputmode=\"decimal\" placeholder=\"0\"></span></label>",
+      "css": ".ds-field-wrap { display: block; font-family: var(--font-anek), 'Segoe UI', system-ui, sans-serif; color: #22221e; } .ds-field-label { display: block; margin-bottom: 4px; font-size: 0.875rem; font-weight: 500; } .ds-field-box { position: relative; display: block; } .ds-field-prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #645e50; pointer-events: none; } .ds-field { width: 100%; min-height: 2.75rem; padding: 0.5rem 0.75rem 0.5rem 1.75rem; background: #fcfaf4; border: 1px solid #cbc0a8; border-radius: 3px; font: inherit; font-size: 1rem; font-variant-numeric: tabular-nums lining-nums; transition: border-color 120ms ease-out; } .ds-field::placeholder { color: #645e50; } .ds-field:hover { border-color: #a3987f; } .ds-field:focus-visible { outline: 2px solid #2a6446; outline-offset: 0; border-color: #2a6446; } .ds-field[aria-invalid='true'] { border-color: #a33b2d; }"
+    },
+    {
+      "name": "Status Stamps",
+      "kind": "chip",
+      "refersTo": "stamp-due",
+      "description": "Rubber-stamp bill status: colour always paired with an icon and words.",
+      "html": "<span class=\"ds-stamp ds-stamp-due\"><svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></svg>Due in 2 days</span> <span class=\"ds-stamp ds-stamp-overdue\"><svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 8v4\"/><path d=\"M12 16h.01\"/></svg>Overdue</span> <span class=\"ds-stamp ds-stamp-paid\"><svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Paid</span>",
+      "css": ".ds-stamp { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.15rem 0.4rem 0.1rem; border: 1px solid currentColor; border-radius: 2px; font-family: var(--font-anek), 'Segoe UI', system-ui, sans-serif; font-size: 0.6875rem; line-height: 1rem; font-weight: 640; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; } .ds-stamp-due { color: #74490b; background: #f5e6c6; } .ds-stamp-overdue { color: #862a1e; background: #f4dcd5; } .ds-stamp-paid { color: #1f5137; }"
+    },
+    {
+      "name": "Navigation Rail",
+      "kind": "nav",
+      "refersTo": "nav-rail",
+      "description": "Solid forest field at 1024px and up; the active item inverts to paper.",
+      "html": "<nav class=\"ds-rail\"><div class=\"ds-rail-mark\">Salary<em>Survival</em></div><a class=\"ds-rail-item ds-active\" href=\"#\">Overview</a><a class=\"ds-rail-item\" href=\"#\">Monthly plan</a><a class=\"ds-rail-item\" href=\"#\">Transactions</a><a class=\"ds-rail-item\" href=\"#\">Bills</a></nav>",
+      "css": ".ds-rail { width: 240px; padding: 24px 12px; background: #153826; color: #f6f2e7; font-family: var(--font-anek), 'Segoe UI', system-ui, sans-serif; } .ds-rail-mark { padding: 0 8px 24px; font-family: var(--font-besley), Georgia, serif; font-weight: 600; font-size: 1.375rem; letter-spacing: -0.015em; } .ds-rail-mark em { font-weight: 500; } .ds-rail-item { display: flex; align-items: center; min-height: 2.5rem; padding: 0 12px; margin-bottom: 2px; border-radius: 3px; color: #f6f2e7; text-decoration: none; font-size: 0.9375rem; font-weight: 500; transition: background-color 150ms; } .ds-rail-item:hover { background: #1a442e; } .ds-rail-item.ds-active { background: #f6f2e7; color: #153826; } .ds-rail-item:focus-visible { outline: 2px solid #f6f2e7; outline-offset: 2px; }"
+    },
+    {
+      "name": "Day Card",
+      "kind": "custom",
+      "refersTo": "day-box",
+      "description": "The signature milk card: ruled day boxes with spend fill, an ink top rule when over the share, solid forest today, and a payday stamp.",
+      "html": "<div class=\"ds-days\"><button class=\"ds-day\"><span class=\"ds-d\">12</span><span class=\"ds-fill ds-over\" style=\"height:100%\"></span><span class=\"ds-amt ds-amt-over\">₹225</span></button><button class=\"ds-day\"><span class=\"ds-d\">13</span><span class=\"ds-fill\" style=\"height:48%\"></span><span class=\"ds-amt\">₹40</span></button><button class=\"ds-day\"><span class=\"ds-d\">14</span><span class=\"ds-amt ds-tick\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg></span></button><button class=\"ds-day ds-today\"><span class=\"ds-d\">3</span><span class=\"ds-amt\">₹43</span></button><button class=\"ds-day ds-ahead\"><span class=\"ds-d\">5</span><span class=\"ds-notch\"></span><span class=\"ds-amt ds-amt-ahead\">₹43</span></button><div class=\"ds-day ds-payday\"><span class=\"ds-paystamp\">Payday</span><span class=\"ds-paydate\">7 Oct</span></div></div>",
+      "css": ".ds-days { display: grid; grid-template-columns: repeat(6, 56px); border-left: 1px solid #cbc0a8; border-top: 1px solid #cbc0a8; font-family: var(--font-anek), 'Segoe UI', system-ui, sans-serif; font-variant-numeric: tabular-nums lining-nums; } .ds-day { position: relative; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 5 / 6; padding: 6px; overflow: hidden; background: #f6f2e7; border: 0; border-right: 1px solid #cbc0a8; border-bottom: 1px solid #cbc0a8; border-radius: 0; text-align: left; font: inherit; cursor: pointer; } .ds-day:focus-visible { outline: 2px solid #22221e; outline-offset: -2px; } .ds-d { position: relative; font-size: 0.6875rem; line-height: 1; color: #645e50; } .ds-amt { position: relative; font-size: 0.75rem; line-height: 1; font-weight: 500; color: #4a463c; } .ds-amt-over { font-weight: 600; color: #22221e; } .ds-amt-ahead { font-weight: 400; color: #645e50; } .ds-tick { color: #2a6446; font-weight: 700; } .ds-fill { position: absolute; left: 0; right: 0; bottom: 0; background: #dce7da; } .ds-fill.ds-over { border-top: 2px solid #22221e; } .ds-today { background: #1f5137; } .ds-today .ds-d, .ds-today .ds-amt { color: #fcfaf4; font-weight: 600; } .ds-ahead { background: #fcfaf4; } .ds-notch { position: absolute; top: 0; right: 0; width: 0; height: 0; border-left: 10px solid transparent; border-top: 10px solid #a9741c; } .ds-payday { align-items: center; justify-content: center; cursor: default; } .ds-paystamp { display: inline-flex; padding: 0.15rem 0.25rem 0.1rem; border: 1px solid currentColor; border-radius: 2px; color: #1f5137; font-size: 0.625rem; font-weight: 640; letter-spacing: 0.06em; text-transform: uppercase; transform: rotate(-6deg); } .ds-paydate { margin-top: 4px; font-size: 0.6875rem; font-weight: 600; color: #1f5137; }"
+    },
+    {
+      "name": "Ruled Bill Row",
+      "kind": "card",
+      "refersTo": "stamp-due",
+      "description": "A row between hairlines, in place of a card: date block, name and stamp, tabular amount, action.",
+      "html": "<ul class=\"ds-rows\"><li class=\"ds-row\"><div class=\"ds-date ds-date-due\"><span class=\"ds-date-d\">5</span><span class=\"ds-date-m\">Oct</span></div><div class=\"ds-row-main\"><span class=\"ds-row-name\">Mobile recharge</span><span class=\"ds-row-meta\">Bills &amp; recharges</span></div><span class=\"ds-row-amt\">₹299</span><button class=\"ds-row-btn\">Mark paid</button></li></ul>",
+      "css": ".ds-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid #e2dac7; border-bottom: 1px solid #e2dac7; font-family: var(--font-anek), 'Segoe UI', system-ui, sans-serif; color: #22221e; } .ds-row { display: flex; align-items: center; gap: 16px; padding: 12px 0; } .ds-row + .ds-row { border-top: 1px solid #e2dac7; } .ds-date { display: flex; flex-direction: column; align-items: center; width: 44px; padding: 4px 0; border: 1px solid #cbc0a8; line-height: 1; color: #4a463c; } .ds-date-due { border-color: #a9741c; color: #74490b; } .ds-date-d { font-family: var(--font-besley), Georgia, serif; font-weight: 600; font-size: 1.125rem; font-variant-numeric: tabular-nums; } .ds-date-m { font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.05em; } .ds-row-main { flex: 1; min-width: 0; } .ds-row-name { display: block; font-weight: 500; } .ds-row-meta { display: block; font-size: 0.8125rem; color: #645e50; } .ds-row-amt { font-weight: 600; font-variant-numeric: tabular-nums lining-nums; } .ds-row-btn { min-height: 2rem; padding: 0 0.65rem; border-radius: 3px; background: #fcfaf4; border: 1px solid #cbc0a8; font: inherit; font-size: 0.875rem; font-weight: 560; cursor: pointer; } .ds-row-btn:hover { background: #eee8d9; } .ds-row-btn:focus-visible { outline: 2px solid #2a6446; outline-offset: 2px; }"
+    },
+    {
+      "name": "Toast",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "Short confirmation with an Undo action; the only dark surface besides the rail.",
+      "html": "<div class=\"ds-toast\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9fbca4\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>Mobile recharge paid: ₹299. Recorded as a transaction.</span><button class=\"ds-toast-action\">Undo</button></div>",
+      "css": ".ds-toast { display: flex; align-items: center; gap: 12px; max-width: 28rem; padding: 10px 8px 10px 14px; border-radius: 3px; background: #22221e; color: #fcfaf4; font-family: var(--font-anek), 'Segoe UI', system-ui, sans-serif; font-size: 0.875rem; box-shadow: 0 18px 40px -16px rgb(34 34 30 / 0.28), 0 2px 6px -2px rgb(34 34 30 / 0.12); } .ds-toast-action { padding: 4px 8px; border: 0; border-radius: 2px; background: transparent; color: #bcd2bd; font: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; } .ds-toast-action:hover { color: #fcfaf4; } .ds-toast-action:focus-visible { outline: 2px solid #2a6446; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Milk Card",
+    "overview": "The pay cycle is drawn the way a doodhwala's monthly card is: a ruled grid of day boxes, each holding what that day took, today's box filled solid, and payday rubber-stamped at the end. Everything else in the system is ruled paper around that card. Surfaces are one warm paper ramp, text is charcoal ink, and a solid forest-green field holds the navigation like the cover of a ledger. The single loudest element on any screen that carries it is the daily-allowance sentence, set in a Clarendon-style serif with the rupee figure coloured inline.\n\nDensity is high but calm. Information sits in ruled rows and ruled cells rather than cards; a hairline in the paper ramp does the work that a box and a shadow would do elsewhere. Money is always set in tabular lining figures so columns line up. State changes are instant: a paid bill gets a stamp, not an animation.\n\nThe system rejects the category default of KPI tiles in a row with a donut chart, and the product's confirmed rejections apply: no purple-blue gradients, glowing blobs, glassmorphism, rounded cards around every element, emoji icons, or decorative charts.",
+    "keyCharacteristics": [
+      "One stepped paper ramp supplies every neutral; no stray greys.",
+      "Forest green owns navigation, primary action, and \"inside the plan\".",
+      "Amber and red are status colours, rationed.",
+      "Ruled rows and ruled cells instead of cards; square or near-square corners (0-3px).",
+      "Besley serif for headings and the allowance sentence; Anek Latin for UI and every figure.",
+      "Tabular lining numerals on all money."
+    ],
+    "rules": [
+      { "name": "The One Ramp Rule", "body": "Every neutral comes from paper-50 to paper-500 or ink-600 to ink-900. A grey from outside these steps is a defect.", "section": "colors" },
+      { "name": "The Amber Is For Bills Rule", "body": "Amber marks a bill that needs paying and nothing else. A day that went over its share is not amber; it gets a 2px charcoal top rule over its spent fill.", "section": "colors" },
+      { "name": "The Red Means Short Rule", "body": "Red marks money that is genuinely short, a bill that is overdue, or the system failing or destroying something. Never use red to mean \"less than before\" or \"worse than the alternative\".", "section": "colors" },
+      { "name": "The Colour Plus Words Rule", "body": "Status colour is never alone: every stamp carries a Lucide icon and words, every day-box notch is backed by the box's accessible description, and every over-share mark appears in the key.", "section": "colors" },
+      { "name": "The Tabular Money Rule", "body": "Every money amount, date numeral, and percentage in a column is set with tabular lining figures. A rupee amount in proportional figures is a defect.", "section": "typography" },
+      { "name": "The One Big Number Rule", "body": "Display scale belongs to the allowance sentence. Page titles stay at headline scale even when the page has nothing larger.", "section": "typography" },
+      { "name": "The Paper Doesn't Float Rule", "body": "In-flow content never carries a shadow. If something needs separation, give it a rule or step it one paper tone.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do take every neutral from the paper and ink ramps (paper-50 to paper-500, ink-600 to ink-900).",
+      "Do set every money figure in tabular lining numerals, with Indian digit grouping.",
+      "Do separate content with hairlines (paper-300) and card rules (paper-400) rather than boxes.",
+      "Do pair every status colour with words and a Lucide icon.",
+      "Do mark a day over its share with a 2px ink-900 top rule over the spent fill.",
+      "Do keep the allowance sentence the only display-scale text, with the figure coloured inline (forest-700 normally, red-800 when short).",
+      "Do keep corners at 0px for structure, 3px for controls, 2px for stamps.",
+      "Do make state changes instant; motion is limited to 120ms colour transitions and the chevron on \"How this is worked out\", and is removed under reduced motion.",
+      "Do write UI copy as plain statements with real figures (\"You have ₹43 a day until payday.\"), never scolding about spending and never using SaaS slogans such as \"unlock\" or \"supercharge\"."
+    ],
+    "donts": [
+      "Don't use amber for anything except bills that are due.",
+      "Don't use red for \"worse than before\" or a less favourable comparison; red is for real shortfalls, overdue bills, and system errors or destructive actions.",
+      "Don't wrap sections in rounded, shadowed cards; the only bordered panels are the square worksheet panel and dialogs.",
+      "Don't put a shadow on anything in the page flow.",
+      "Don't show a positive allowance when nothing is safe to spend.",
+      "Don't let the day grid scroll sideways, or shrink boxes below 40px to fit more columns.",
+      "Don't use KPI tiles in a row or a donut chart for the cycle summary.",
+      "Don't use emoji or glyph icons; icons are Lucide line icons."
+    ]
+  }
+}
